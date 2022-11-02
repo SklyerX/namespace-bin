@@ -8,7 +8,7 @@ export function createBinViaApi(
 ) {
   let config = {
     method: "POST",
-    url: "https://nmb.0110110.repl.co",
+    url: "https://nmb.0110110.repl.co/v1/bin",
     headers: {
       "Content-Type": "application/json",
     },
