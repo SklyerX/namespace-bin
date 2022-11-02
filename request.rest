@@ -1,0 +1,15 @@
+# POST http://localhost:3001/v1/bin
+# Content-Type: application/json
+
+# {
+#     "Title": "NodeJs Snippet",
+#     "Description": "a nodejs snippet of my error with mongo and nestjs",
+#     "DeleteAfterView": false,
+#     "Content": "import { Post } from '@nextjs/common'"
+# }
+
+# GET http://localhost:3001/v1/bin
+
+# GET http://localhost:3001/v1/bin/ztXtFdPq
+
+# DELETE http://localhost:3001/v1/bin/dyqsd0PO
