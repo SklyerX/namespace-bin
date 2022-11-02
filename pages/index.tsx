@@ -16,7 +16,7 @@ export default function Home({ bin }: any) {
           className={styles.card}
           onClick={() =>
             window.location.replace(
-              `${window.location.href}/bin/${data.UrlCode}`
+              `${window.location.href}bin/${data.UrlCode}`
             )
           }
         >
