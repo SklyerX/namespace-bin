@@ -33,6 +33,20 @@ module.exports = (req: any, res: any) => {
 
   const generateKey = generateWords(8);
 
+  if (Title.length >= 20)
+    return res.status(409).send({
+      success: false,
+      herf: req.originalUrl,
+      message: 'Title length exeeded',
+    });
+
+  if (Description.length >= 60)
+    return res.status(409).send({
+      success: false,
+      herf: req.originalUrl,
+      message: 'Description length exeeded',
+    });
+
   Database.findOne({ UrlCode: generateKey }, async (err: any, data: bin) => {
     if (err) {
       return res.status(500).send({
