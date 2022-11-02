@@ -1,0 +1,70 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #212121;
+  width: fit-content;
+  height: 4rem;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding-right: 15px;
+  color: #fff;
+}
+
+.banner svg {
+  margin-left: 0.5rem;
+}
+
+.banner h3 {
+  margin-left: 0.5rem;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.editor {
+  width: 100%;
+  height: 30rem;
+  resize: vertical;
+  background-color: #e5e5e5;
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+}
+
+.shell {
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+.button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(156, 156, 156);
+  color: #fff;
+}
+
+.button:active {
+  background-color: #000;
+  columns: #fff;
+}
+
+.deleter {
+  display: flex;
+  flex-direction: row;
+}
+
+.deleter input[type="checkbox"] {
+  margin-left: 1rem;
+  width: 1rem;
+}
