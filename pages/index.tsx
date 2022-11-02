@@ -15,7 +15,9 @@ export default function Home({ bin }: any) {
           key={data.UrlCode}
           className={styles.card}
           onClick={() =>
-            window.location.replace(`http://localhost:3000/bin/${data.UrlCode}`)
+            window.location.replace(
+              `${window.location.href}/bin/${data.UrlCode}`
+            )
           }
         >
           <h2 className={styles.header}>{data.Title}</h2>
@@ -27,7 +29,7 @@ export default function Home({ bin }: any) {
 }
 
 export async function getServerSideProps() {
-  const req = await fetch(`http://localhost:3001/v1/bin`);
+  const req = await fetch(`https://nmb.0110110.repl.co/v1/bin`);
   const data = await req.json();
 
   return {

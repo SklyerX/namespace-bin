@@ -147,7 +147,7 @@ export default function BinsList({ bin }: any) {
 }
 
 export async function getServerSideProps({ params }: any) {
-  const req = await fetch(`http://localhost:3001/v1/bin/${params.id}`);
+  const req = await fetch(`https://nmb.0110110.repl.co/v1/bin/${params.id}`);
   const data = await req.json();
 
   return {
