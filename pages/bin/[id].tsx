@@ -25,6 +25,25 @@ export default function BinsList({ bin }: any) {
     const desc: any = document.querySelector("#description");
     const content: any = document.querySelector("#textarea");
 
+    const titleLength = title.innerHTML.length;
+    const descLength = desc.innerHTML.length;
+    const contentLength = content.value.length;
+
+    const border = "3px solid #f00";
+
+    if (titleLength !== 0 && descLength !== 0 && contentLength !== 0) {
+    } else {
+      if (titleLength === 0) {
+        title.style.border = border;
+      }
+      if (descLength === 0) {
+        desc.style.border = border;
+      }
+      if (contentLength === 0) {
+        content.style.border = border;
+      }
+    }
+
     createBinViaApi(
       title?.innerHTML,
       desc?.innerHTML,
