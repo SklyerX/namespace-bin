@@ -19,16 +19,26 @@ export default function CreateBin() {
       desc?.innerHTML,
       deleteAfterView,
       content.value
-    ).then((res) => {
-      if (res.data.success === true) {
-        toast.success("Bin Link Copied!");
-        console.log(res.data);
+    )
+      .then((res) => {
+        if (res.data.success === true) {
+          toast.success("Bin Link Copied!");
+          console.log(res.data);
 
-        window.navigator.clipboard.writeText(
-          `http://localhost:3000/bin/${res.data.data.urlCode}`
-        );
-      }
-    });
+          window.navigator.clipboard.writeText(
+            `http://localhost:3000/bin/${res.data.data.urlCode}`
+          );
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        if (err.message.includes("409")) {
+          return toast.error(
+            "Title or Description length exceeded. \nTitle Limit: 20 \nDescription Limit: 60"
+          );
+        }
+        toast.error("Something went wrong while creating a bin!");
+      });
   };
 
   return (
