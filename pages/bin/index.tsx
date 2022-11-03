@@ -26,7 +26,7 @@ export default function CreateBin() {
           console.log(res.data);
 
           window.navigator.clipboard.writeText(
-            `http://localhost:3000/bin/${res.data.data.urlCode}`
+            `https://namespace.netlify.app/bin/${res.data.data.urlCode}`
           );
         }
       })
